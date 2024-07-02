@@ -6,21 +6,21 @@ var
 
 function eh_binario (n: longint):boolean;
 var
-    aux: longint;
+    ultimo: longint;
 
 begin
 
     eh_binario:= true;
 
-    aux:= 0;
+    ultimo:= 0;
     
     while (eh_binario) and (n > 0) do
     begin
 
-        aux:= n mod 10;
+        ultimo:= n mod 10;
         n:= n div 10;
 
-            if (aux = 0) and (aux = 1) then
+            if (ultimo = 0) or (ultimo = 1) then
                 eh_binario:= true
 
             else
