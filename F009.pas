@@ -3,9 +3,22 @@ program media_alunos;
 var 
     i, n, p1, p2, p3, media: longint;
 
-(* coloque aqui o codigo da sua funcao que calcula media ponderada *)
+function media_ponderada (n1, n2, n3: longint): longint;
+begin
 
-(* coloque aqui o codigo da funcao que decide pela aprovacao/reprovacao *)
+    media_ponderada:= (n1 + (n2 * 2) + (n3 * 3)) div 6;
+
+end;
+
+function aprovado (media_ponderada: longint): boolean;
+begin
+
+    if (media_ponderada >= 50) then
+        aprovado:= true
+    else
+        aprovado:= false;
+
+end;
 
 begin
 
